@@ -24,39 +24,42 @@ https://pokeapi.co
     <link rel="stylesheet" href="./Css/footer.css" />
   </head>
   <body>
-    <nav id="menu">
-      <div class="logo">
-        <img src="./Img/Pokémon_logo.png" alt="Pokémon" />
-      </div>
-      <div class="items_menu">
-        <ul>
-          <li>
-            <button id="all_pokemon" class="button">Todos</button>
-          </li>
-          <li>
-            <button>Categorias</button>
-            <ul id="container_button_category"></ul>
-          </li>
-          <li>
-            <a href="index.html">
-              <button class="items">Pokemons</button>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <form class="search">
-        <input
-          type="text"
-          id="input"
-          placeholder="ID o Nombre"
-          list="datalist_items"
-          autocomplete="off"
-        />
-        <datalist id="datalist_items"> </datalist>
-        <button id="button" class="button">Buscar</button>
-      </form>
-    </nav>
-    <div class="container_card" id="container_card"></div>
+    <header>
+      <nav id="menu" aria-label="Navegación principal">
+        <div class="logo">
+          <img src="./Img/Pokémon_logo.png" alt="Pokémon" />
+        </div>
+        <div class="items_menu">
+          <ul>
+            <li>
+              <button id="all_pokemon" class="button">Todos</button>
+            </li>
+            <li>
+              <button type="button">Categorías</button>
+              <ul id="container_button_category"></ul>
+            </li>
+            <li>
+              <a class="items button" href="index.html">Pokemons</a>
+            </li>
+          </ul>
+        </div>
+        <form class="search" role="search" aria-label="Buscar items">
+          <label class="sr-only" for="input">Buscar item</label>
+          <input
+            type="text"
+            id="input"
+            placeholder="ID o Nombre"
+            list="datalist_items"
+            autocomplete="off"
+          />
+          <datalist id="datalist_items"></datalist>
+          <button id="button" class="button">Buscar</button>
+        </form>
+      </nav>
+    </header>
+    <main>
+      <div class="container_card" id="container_card"></div>
+    </main>
     <footer>
       <div class="footer_logo">
         <img src="./Img/Logo de pikachu.png" alt="Wikipoke" />

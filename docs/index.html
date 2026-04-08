@@ -24,42 +24,44 @@ https://pokeapi.co
     <link rel="stylesheet" href="./Css/footer.css" />
   </head>
   <body>
-    <nav id="menu">
-      <div class="logo">
-        <img src="./Img/Pokémon_logo.png" alt="Pokémon" />
-      </div>
-      <div class="items_menu">
-        <ul>
-          <li>
-            <button id="all_pokemon" class="button">Todos</button>
-          </li>
-
-          <li>
-            <button>Generaciones</button>
-            <ul>
-              <button id="gen_1" class="button list">1° generacion</button>
-              <button id="gen_2" class="button list">2° generacion</button>
-              <button id="gen_3" class="button list">3° generacion</button>
-              <button id="gen_4" class="button list">4° generacion</button>
-              <button id="gen_5" class="button list">5° generacion</button>
-              <button id="gen_6" class="button list">6° generacion</button>
-              <button id="gen_7" class="button list">7° generacion</button>
-              <button id="gen_8" class="button list">8° generacion</button>
-            </ul>
-          </li>
-          <li>
-            <a href="items.html" class="items">
-              <button class="items">Items</button>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <form class="search">
-        <input type="text" id="input" placeholder="Nombre o ID" />
-        <button id="button" class="button">Buscar</button>
-      </form>
-    </nav>
-    <div class="container_card" id="container_card"></div>
+    <header>
+      <nav id="menu" aria-label="Navegación principal">
+        <div class="logo">
+          <img src="./Img/Pokémon_logo.png" alt="Pokémon" />
+        </div>
+        <div class="items_menu">
+          <ul>
+            <li>
+              <button id="all_pokemon" class="button">Todos</button>
+            </li>
+            <li>
+              <button type="button">Generaciones</button>
+              <ul>
+                <li><button id="gen_1" class="button list">1° generación</button></li>
+                <li><button id="gen_2" class="button list">2° generación</button></li>
+                <li><button id="gen_3" class="button list">3° generación</button></li>
+                <li><button id="gen_4" class="button list">4° generación</button></li>
+                <li><button id="gen_5" class="button list">5° generación</button></li>
+                <li><button id="gen_6" class="button list">6° generación</button></li>
+                <li><button id="gen_7" class="button list">7° generación</button></li>
+                <li><button id="gen_8" class="button list">8° generación</button></li>
+              </ul>
+            </li>
+            <li>
+              <a class="items button" href="items.html">Items</a>
+            </li>
+          </ul>
+        </div>
+        <form class="search" role="search" aria-label="Buscar Pokémon">
+          <label class="sr-only" for="input">Buscar Pokémon</label>
+          <input type="text" id="input" placeholder="Nombre o ID" />
+          <button id="button" class="button">Buscar</button>
+        </form>
+      </nav>
+    </header>
+    <main>
+      <div class="container_card" id="container_card"></div>
+    </main>
     <footer>
       <div class="footer_logo">
         <img src="./Img/Logo de pikachu.png" alt="Wikipoke" />
